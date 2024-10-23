@@ -9,16 +9,17 @@ html {
 }
 
 .page {
-  display: grid;
-  place-items: center;
-  inline-size: 1200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  inline-size: 100%;
   block-size: 100%;
-  min-height: 100vh;
   margin: auto;
   color: #fff;
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   background-color: #1b1919;
+  margin: 0;
 }
 
 h1,
@@ -88,6 +89,11 @@ ol {
   outline-offset: 2px;
 }
 
+.search-form__label:hover .search-form__label-text {
+  text-decoration: underline;
+  text-underline-position: under;
+}
+
 .search-form__textfield {
   font-family: 'Fira Sans Condensed', sans-serif;
   background-color: transparent;
@@ -143,11 +149,6 @@ ol {
   justify-content: space-between;
   width: fit-content;
   gap: 15px;
-}
-
-.search-form__label-text:hover {
-  text-decoration: underline;
-  text-underline-position: under;
 }
 
 .search-form__pseudo-checkbox {
@@ -234,6 +235,7 @@ ol {
 
 .content__list {
   height: 298px;
+  width: 399px;
   overflow-y: scroll;
   position: relative;
 }
@@ -275,6 +277,7 @@ ol {
 .content__video-card {
   display: flex;
   justify-content: space-between;
+  min-height: 107px;
 }
 
 .content__video-card-description-container {
@@ -306,11 +309,16 @@ ol {
   height: 103px;
   width: 194px;
   object-fit: cover;
+  align-self: center;
 }
 
 .more-button {
   padding: 6px 146px;
   text-wrap: nowrap;
+}
+
+.error__title {
+  overflow-y: hidden;
 }
 
 .visually-hidden {
