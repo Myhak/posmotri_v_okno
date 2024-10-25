@@ -200,7 +200,7 @@ ol {
 
 .button:focus-visible {
   outline: 1px solid #fff;
-  outline-offset: 2px;
+  outline-offset: 1px;
 }
 
 .search-form__submit-button {
@@ -217,7 +217,7 @@ ol {
   flex-direction: column;
   justify-content: space-between;
   gap: 26px;
-  width: 100%;
+  min-width: 399px;
   height: 100%;
 }
 
@@ -235,8 +235,8 @@ ol {
 
 .content__list {
   height: 298px;
-  width: 399px;
-  overflow-y: scroll;
+  width: 100%;
+  overflow-y: auto;
   position: relative;
 }
 
@@ -315,10 +315,8 @@ ol {
 .more-button {
   padding: 6px 146px;
   text-wrap: nowrap;
-}
-
-.error__title {
-  overflow-y: hidden;
+  margin: 2px;
+  width: calc(100% - 4px);
 }
 
 .visually-hidden {
